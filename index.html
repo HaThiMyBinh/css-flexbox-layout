@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 1. Header: Hiển thị tiêu đề trang -->
+        <header class="header">
+            <h1>Header</h1>
+            <p class="tagline">Bố cục trang web Responsive với CSS Flexbox</p>
+        </header>
+
+        <!-- 2. Navigation: Chứa menu điều hướng -->
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Trang chủ</a></li>
+                <li><a href="#news">Tin tức</a></li>
+                <li><a href="#services">Dịch vụ</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- 3 & 4. Main Container: Chứa Main Content và Sidebar -->
+        <div class="main-container">
+            <main class="content">
+                <h2>Main Content</h2>
+                <p>Chào mừng bạn đến với bài thực hành xây dựng bố cục trang web hoàn chỉnh bằng <strong>CSS Flexbox</strong>!</p>
+                <div class="content-box">
+                    <h3>Nguyên lý phân chia bố cục Flexbox:</h3>
+                    <ul>
+                        <li><strong>Khung cha (.container):</strong> Thiết lập <code>display: flex; flex-direction: column;</code> để sắp xếp Header, Nav, Main-Container và Footer theo chiều dọc.</li>
+                        <li><strong>Vùng giữa (.main-container):</strong> Thiết lập <code>display: flex; flex: 1;</code> chiếm toàn bộ khoảng trống còn lại giữa Header và Footer.</li>
+                        <li><strong>Phần nội dung (.content):</strong> Có <code>flex: 3;</code> (chiếm 75% chiều rộng hàng ngang trên Desktop).</li>
+                        <li><strong>Phần cột phụ (.sidebar):</strong> Có <code>flex: 1;</code> (chiếm 25% chiều rộng hàng ngang trên Desktop).</li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="sidebar">
+                <h3>Sidebar</h3>
+                <div class="widget">
+                    <h4>📌 Tin tức mới</h4>
+                    <ul>
+                        <li><a href="#">Làm chủ CSS Flexbox trong 30 phút</a></li>
+                        <li><a href="#">Flexbox vs CSS Grid: Khi nào nên dùng?</a></li>
+                        <li><a href="#">Thiết kế Responsive không dùng thư viện</a></li>
+                    </ul>
+                </div>
+                <div class="widget ad-widget">
+                    <span class="ad-tag">Quảng cáo</span>
+                    <h4>Khóa Học Lập Trình Frontend</h4>
+                    <p>Thực chiến HTML5, CSS3, Flexbox, Responsive Web Design.</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 5. Footer: Hiển thị thông tin cuối trang -->
+        <footer class="footer">
+            <p>Footer &copy; 2026 - CSS Flexbox Responsive Layout Practice</p>
+        </footer>
+    </div>
+</body>
+</html>
